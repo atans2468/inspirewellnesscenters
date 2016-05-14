@@ -1,27 +1,45 @@
 <!-- Beginning of Header/Navbar -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="headerCtrl">
 	
 	<div class="container-fluid">
-		<!--UNUSED COLLAPSED NAVBAR (FOR NOW)<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-click="navbarCollapsed = !navbarCollapsed">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-		</div>-->
+			<div class="navbar-header" style="padding-top: 7px;">
+				<a ui-sref='inspireWellness.home' class="pull-left"><img src="img/Union-Village-Logo2.png" style="height: 30px; margin-right: 5px;"></a>
+			</div>
+		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<!--<div class="navbar-header">
+                  <a class="navbar-brand" href="index.html"><span class="union">Union</span><span class="village">Village</span></a>
+                </div>-->
                   
-                <!-- This is the proper image for the header -->
+                <!-- This is the proper image for the header
                 <div class="navbar-header" style="padding-top: 7px;">
-                  <a ng-href="#" class="pull-left"><img src="img/Union-Village-Logo2.png" style="height: 30px; margin-right: 5px;"></a>
-                </div>
-
-			<div class="pull-right" ng-controller="LoginCtrl">
-				<a ng-href='#' ng-click="ref.unauth(); logout()" style="color: #fff; text-decoration: none;">Logout</a>
-			</div>
+                  <a ui-sref='unionVillage.home' class="pull-left"><img src="img/Union-Village-Logo2.png" style="height: 30px; margin-right: 5px;"></a>
+                </div>-->
+			
+			<ul class="nav navbar-nav">
+				<li ng-class="{ active: isActive('/')}"><a ui-sref='inspireWellness.home'>Senior Living Program</a></li>
+				<li ng-class="{ active: isActive('/wellnessMall')}"><a ui-sref='inspireWellness.wellnessMall'>Wellness Mall</a></li>
+				<li ng-class="{ active: isActive('/ourCompany')}"><a ui-sref='inspireWellness.ourCompany'>Our Company</a></li>
+				<li ng-class="{ active: isActive('/callUs') || isActive('/emailUs')}">
+					<a class="dropdown-toggle" data-toggle="dropdown" ui-sref="#">Contact Us
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li ng-class="{ active: isActive('/callUs')}"><a ui-sref="inspireWellness.callUs">Call Us</a></li>
+						<!--<li ng-class="{ active: isActive('/drivingDirections')}"><a ui-sref="unionVillage.drivingDirections">Driving Directions</a></li>-->
+						<li ng-class="{ active: isActive('/emailUs')}"><a ui-sref="inspireWellness.emailUs">Email Us</a></li> 
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>

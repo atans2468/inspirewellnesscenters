@@ -47,7 +47,7 @@ nav.navbar div ul li.active a {
 
 nav.navbar div ul li a {
   color: #fff !important; /* Changes font color of main tabs */
-  font-size: 12px; /* Changes font size of main tabs */
+  font-size: 14px; /* Changes font size of main tabs */
 }
 
 nav.navbar div ul ul.dropdown-menu li a {
@@ -63,47 +63,445 @@ nav.navbar div ul ul.dropdown-menu li a {
 /* End of Top Navbar Styling */
 
 
-/* Side Navbar Styling */
-/* make sidebar nav vertical */ 
-@media (min-width: 768px) {
-  .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
-    max-height: none;
+
+/* ALL Home Page Styling (Including Desktop and Mobile) */
+div.desktopHP {
     width: 100%;
-  }
-  .sidebar-nav .navbar ul {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li {
-    float: none;
-    display: block;
-    margin-top: 35px !important;
-  }
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+    height: 100vh;
 }
-/* End of Side Navbar Styling */
+@media (max-width: 1199px){
+    div.desktopHP {
+        display: none;
+    }
+}
+
+div.mobileHP {
+    width: 100%;
+    height: 100vh;
+}
+@media (min-width: 1199px){
+    div.mobileHP {
+        display: none;
+    }
+}
+
+/* Carousel Styling for Home Page/First Section */
+div.desktopHP #one{
+    width: 100%;
+    height: 100vh;
+    margin-left: 0px;
+    margin-top: 0px;
+    /* position: fixed;
+    z-index: 1; */
+}
+
+.carousel .item {
+    min-width: 100%; /*slider width*/
+    max-height: 90%; /*slider height*/
+}
+
+.carousel .carousel-inner .item img.homeimg {
+    min-width: 100%; /*img width*/
+    height: 100vh; /*img height*/
+}
+
+.carousel .carousel-inner .item video.homevid {
+    min-width: 100%; /*vid width*/
+    height: 100vh; /*vid height*/
+}
+
+.carousel .carousel-inner-home .item .carousel-caption {
+    background-color: rgba(87, 87, 87, 0.7);
+}
+
+/* Styling for carousel "Scroll Down" button */
+.carousel .item .carousel-caption .hp-scroll {
+    font-size: 20px; 
+    color: #fff; 
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+/* End of Carousel Styling */
+
+/* Beginning of Homepage Sections Styling */
+
+/* Top Section/Section 1 */
+.top-section .block div#homeCarousel .carousel-inner {
+    height: 100vh;
+}
+
+.top-section .block div#homeCarousel .carousel-inner .item .carousel-caption h1 {
+    margin-bottom: 5%;
+    color: #fff;
+}
 
 
-/* Carousel Styling for Photos Page */
-.carousel .item div#photos-carousel {
-  top: 0px !important;
+/* Section 2 - Top Rows */
+div.desktopHP #two{
+    width: 100%;
+    height: 100vh;
+    top: 95%;
+    padding-top: 40px;
+    margin-left: 0px;
+    background: #fff;
+    text-align: center;
+    /* position: relative;
+    z-index: 2; */
 }
-.carousel .item div.carousel-caption h1 {
+.second-section .hp-header2 {
+	margin-top: 1%;
+	color: #000;
+}
+
+.second-section .mission-row {
+    height: 70%;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 2%;
+    text-align: left;
+}
+
+.second-section .mission-row img.firstImage {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-left: 10%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+
+.second-section .mission-row h3 {
+    padding-top: 3%;
+}
+
+.second-section .mission-row h3 span {
+    color: #556b2f;
+}
+
+.second-section .bot-col-7 {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.second-section .bot-col-7 a {
+    font-size: 20px;
+    color: #000;
+    margin-top: 3%;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* End of Section 2 */
+
+
+
+/* Beginning of Section 3 */
+div.desktopHP #three{
+    width: 100%;
+    height: 100vh;
+    top: 95%;
+    padding-top: 40px;
+    margin-left: 0px;
+    background: #556b2f;
+    color: #fff;
+    text-align: center;
+    /* position: relative;
+    z-index: 2; */
+}
+
+.third-section .hp-header3 {
+	margin-top: 1%;
+}
+
+.third-section .vision-row {
+    height: 75%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.third-section .vision-row h4 {
+    padding: 3%;
+}
+
+.third-section .bot-col-7 {
+    text-align: center;
+}
+
+.third-section .bot-col-7 a {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 3%;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* End of Third Section
+End of all Home Page Styling for desktop */
+
+
+
+
+
+/* Beginning of Home Page Styling for Mobile */
+/* First Section/Carousel */
+.mobileHP .top-section {
+    width: 100%;
+    height: 100vh;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.mobileHP .carousel .carousel-inner .item video.homevid {
+    width: 100%; /*vid width*/
+    height: 100vh; /*vid height*/
+}
+
+/* Mobile Carousel Caption Styling */
+.mobileHP .carousel .carousel-inner .item .carousel-caption{
+    background-color: rgba(87, 87, 87, 0.5);
+    margin-bottom: 10%;
+}
+
+/* Mobile Carousel Text Styling */
+.mobileHP .carousel .carousel-inner .item .carousel-caption h1{
+    margin-bottom: 5%;
+    color: #fff;
+}
+/* End of First section and Carousel */
+
+
+
+/* Beginning of Second Section */ 
+.mobileHP .mob-second-section {
+    width: 100%;
+    height: 100vh;
+    top: 95%;
+    padding-top: 0px !important;
+    margin-left: 0px;
+    background: #fff;
+    text-align: center;
+}
+/* Header Styling for iphone6 and larger */
+@media (min-width: 350px){
+    .mobileHP .mob-second-section .col-top .missionHead {
+        font-size: 36px;
+    }
+}
+
+/* mid column styling */
+.mobileHP .mob-second-section .col-mid {
+    text-align: left;
+}
+
+/* mid column image */
+.mobileHP .mob-second-section .col-mid img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-left: 10%;
+    margin-right: 3%;
+    margin-top: 8%;
+}
+
+/* mid column header styling */
+.mobileHP .mob-second-section .col-mid h4 {
+    padding-top: 6%;
+}
+
+/* mid column header styling */
+.mobileHP .mob-second-section .col-mid h4 span {
+    color: #556b2f;
+}
+
+/* Bottom column containing main paragraph */
+.mobileHP .mob-second-section .col-bot {
+    height: 5%;
+    text-align: center;
+    padding-top: 8%;
+}
+
+.mobileHP .mob-second-section .col-bot p {
+    font-size: 20px;
+}
+
+/* Font Styling for iphone4 screen sizes */
+@media (max-height: 500px){
+    .mobileHP .mob-second-section .col-bot p {
+        font-size: 14px;
+    }
+}
+/* Font Styling for iphone5 screen sizes */
+@media (min-height: 550px){
+    .mobileHP .mob-second-section .col-bot p {
+        font-size: 16px;
+    }
+}
+/* Font Styling for iphone6 screen sizes */
+@media (min-width: 350px){
+    .mobileHP .mob-second-section .col-bot p {
+        font-size: 18px;
+    }
+}
+/* End of Second Section */
+
+
+
+/* Beginning of Third Section */
+.mobileHP .mob-third-section{
+    width: 100%;
+    height: 100vh;
+    top: 95%;
+    padding-top: 0px !important;
+    margin-left: 0px;
+    background: #556b2f;
+    text-align: center;
+    color: #fff;
+}
+/* Header Styling for iphone6 and larger */
+@media (min-width: 350px){
+    .mobileHP .mob-third-section .col-top .visionHead {
+        font-size: 36px;
+    }
+}
+
+/* Top column containing the header and image */
+.mobileHP .mob-third-section .col-top {
+    height: 45%;
+}
+/* top column image */
+.mobileHP .mob-third-section .col-top img {
+    width: 90%;
+}
+/* Image Styling for iphone4 screen sizes */
+@media (max-height: 500px){
+    .mobileHP .mob-third-section .col-top img {
+        width: 100%;
+        height: 75%;
+    }
+}
+/* Image Styling for iphone5 screen sizes */
+@media (min-height: 550px){
+    .mobileHP .mob-third-section .col-top img {
+        width: 100%;
+        height: 75%;
+    }
+}
+/* Image Styling for iphone6 screen sizes */
+@media (min-width: 350px){
+    .mobileHP .mob-third-section .col-top img {
+        width: 100%;
+        height: 75%;
+    }
+}
+
+/* Middle column containing main paragraph */
+.mobileHP .mob-third-section .col-mid {
+    height: 40%;
+}
+
+.mobileHP .mob-third-section .col-mid p {
+    font-size: 20px;
+}
+/* Font Styling for iphone4 screen sizes */
+@media (max-height: 500px){
+    .mobileHP .mob-third-section .col-mid p {
+        font-size: 20px;
+        margin-top: 3%;
+    }
+}
+/* Font Styling for iphone5 screen sizes */
+@media (min-height: 550px){
+    .mobileHP .mob-third-section .col-mid p {
+        font-size: 22px;
+        margin-top: 3%;
+    }
+}
+/* Font Styling for iphone6 screen sizes */
+@media (min-width: 350px){
+    .mobileHP .mob-third-section .col-mid p {
+        font-size: 26px;
+        margin-top: 3%;
+    }
+}
+/* End of Third Section
+End of ALL Home Page Styling */
+
+
+
+/* Wellness Mall Styling
+This is the page wrapper styling which contains the background image*/
+.wellness-main-wrapper {
+    background-image: url('../img/wellnessMall.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+/* This is the styling for the desktop row which contains the background shadow */
+.wellness-main-wrapper .row {
+    background-color: rgba(1, 1, 1, 0.8);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+}
+
+/* This is the styling for the Middle column on Desktop */
+.wellness-main-wrapper .row .col-xs-8 {
+    height: 75%; 
+    text-align: left; 
+    background-color: white; 
+    margin-top: 5%;
+    text-align: center;
+}
+
+/* This is the general styling of the unordered list on Desktop */
+.wellness-main-wrapper .row .col-xs-8 ul {
+    text-align: left;
+    margin-top: 3%;
+    /*float: left;*/
+    display: inline-block;
+}
+/* End of Wellness Mall Styling */
+
+
+
+/* Our Company Page Styling */
+/* Our Company Page Styling */
+.oc-page-wrapper{
+  margin-top: 55px;
+}
+.oc-page-wrapper div#cofounder-row {
+  width: 100%;
+  margin-left: 0px;
+}
+
+.oc-page-wrapper div#cofounder-row .col-md-6 {
+  height: 100%;
+  text-align: center;
+}
+
+.oc-page-wrapper div#cofounder-row .col-md-6 a {
+  text-decoration: none;
   color: #000;
 }
-/* End of Photos Page */
 
+.oc-page-wrapper div#cofounder-row .col-md-6 img {
+  width: 250px;
+  height: 300px;
+}
 
-
-/* Styling for Site Plan Page */
-
-/* Need new photo before adding styling */
-
-/* End of Styling for Site Plan Page */
+.oc-page-wrapper div#cofounder-row .col-xs-12 {
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+/* End of Our Company Page Styling */
 
 
 

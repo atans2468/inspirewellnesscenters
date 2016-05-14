@@ -1,2 +1,2 @@
-var unionVillage = angular.module('unionVillage.services', []);
+var inspireWellness = angular.module('inspireWellness.services', []);
 

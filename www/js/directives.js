@@ -1,1 +1,1 @@
-var unionVillage = angular.module('unionVillage.directives', []);
+var inspireWellness = angular.module('inspireWellness.directives', []);

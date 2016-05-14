@@ -1,11 +1,11 @@
-var unionVillage = angular.module('unionVillage', ['ui.router', 'unionVillage.controllers', 'unionVillage.services', 'unionVillage.directives', 'firebase']);
+var inspireWellness = angular.module('unionVillage', ['ui.router', 'inspireWellness.controllers', 'inspireWellness.services', 'inspireWellness.directives', 'firebase']);
 
-unionVillage.config(function($stateProvider, $urlRouterProvider) {
+inspireWellness.config(function($stateProvider, $urlRouterProvider) {
       
   $stateProvider
   
   // setup an abstract state for the tabs directive   
-  .state('unionVillage', {
+  .state('inspireWellness', {
         abstract: true,
         views: {
             'header': {
@@ -16,27 +16,51 @@ unionVillage.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state("unionVillage.home", {
+    .state("inspireWellness.home", {
         url: "/",
         views: {
             'content@': {
-                templateUrl: 'templates/index.html'
+                templateUrl: 'templates/home.html'
             }
         }
     })
-    .state("unionVillage.dashboard", {
-        url: "/dashboard",
+    .state("inspireWellness.wellnessMall", {
+        url: "/wellnessMall",
         views: {
             'content@': {
-                templateUrl: 'templates/dashboard.html'
+                templateUrl: 'templates/wellnessMall.html'
             }
         }
     })
-    .state("unionVillage.medicalPortal", {
-        url: "/medicalPortal",
+    .state("inspireWellness.ourCompany", {
+        url: "/ourCompany",
         views: {
             'content@': {
-                templateUrl: 'templates/medicalPortal.html'
+                templateUrl: 'templates/ourCompany.html'
+            }
+        }
+    })
+    .state("inspireWellness.callUs", {
+        url: "/callUs",
+        views: {
+            'content@': {
+                templateUrl: 'templates/callUs.html'
+            }
+        }
+    })
+    .state("inspireWellness.emailUs", {
+        url: "/emailUs",
+        views: {
+            'content@': {
+                templateUrl: 'templates/emailUs.html'
+            }
+        }
+    })
+    .state("inspireWellness.success", {
+        url: "/success",
+        views: {
+            'content@': {
+                templateUrl: 'templates/success.html'
             }
         }
     });
